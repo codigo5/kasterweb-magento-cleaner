@@ -2,14 +2,14 @@
 
 class Kasterweb_Cleaner_Block_Adminhtml_Cache extends Mage_Adminhtml_Block_Template
 {
-    public function getMageTablesUrl()
+    public function getMagentoTablesUrl()
     {
-        return $this->getUrl('*/*/mageTables');
+        return $this->getUrl('*/*/magentoTables');
     }
 
-    public function getMageDirUrl()
+    public function getMagentoDirectoriesUrl()
     {
-        return $this->getUrl('*/*/mageDir');
+        return $this->getUrl('*/*/magentoDirectories');
     }
 
     public function getRedisUrl()

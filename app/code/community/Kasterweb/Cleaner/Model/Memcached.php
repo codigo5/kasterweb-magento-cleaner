@@ -15,7 +15,7 @@ class Kasterweb_Cleaner_Model_Memcached extends Mage_Core_Model_Abstract
             throw new InvalidArgumentException('Any socket path was found. Please set it in System > Configuration > Kasterweb > Cleaner > Memcached -> Socket path');
         }
         foreach ($socketsPaths as $socketPath) {
-            $returns[] = shell_exec(sprintf('echo "flush_all" | nc -U %s', $socketPath));
+            $returns[] = shell_exec(sprintf('echo "flush_all" | nc -U %s 2>&1', $socketPath));
         }
         return $returns;
     }

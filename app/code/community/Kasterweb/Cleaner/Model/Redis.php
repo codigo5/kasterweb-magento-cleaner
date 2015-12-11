@@ -13,6 +13,6 @@ class Kasterweb_Cleaner_Model_Redis extends Mage_Core_Model_Abstract
         if (empty($socketPath)) {
             throw new InvalidArgumentException('Empty socket path. Please set it in System > Configuration > Kasterweb > Cleaner > Redis -> Socket path');
         }
-        return shell_exec(sprintf('redis-cli -s %s flushall', $socketPath));
+        return shell_exec(sprintf('redis-cli -s %s flushall 2>&1', $socketPath));
     }
 }

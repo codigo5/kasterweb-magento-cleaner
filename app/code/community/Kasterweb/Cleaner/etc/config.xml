@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Kasterweb_Cleaner>
-            <version>1.0.2</version>
+            <version>1.1.0</version>
         </Kasterweb_Cleaner>
     </modules>
     <global>
@@ -86,9 +86,25 @@
     </adminhtml>
     <crontab>
         <jobs>
+            <cleaner_magento_tables>
+                <schedule>
+                    <cron_expr>0 23 * * 6</cron_expr>
+                </schedule>
+                <run>
+                    <model>cleaner/job::performMagentoTables</model>
+                </run>
+            </cleaner_magento_tables>
+            <cleaner_magento_directories>
+                <schedule>
+                    <cron_expr>0 23 * * 6</cron_expr>
+                </schedule>
+                <run>
+                    <model>cleaner/job::performMagentoDirectories</model>
+                </run>
+            </cleaner_magento_directories>
             <cleaner_redis>
                 <schedule>
-                    <cron_expr>*/5 * * * *</cron_expr>
+                    <cron_expr>0 23 * * *</cron_expr>
                 </schedule>
                 <run>
                     <model>cleaner/job::performRedis</model>
@@ -96,7 +112,7 @@
             </cleaner_redis>
             <cleaner_memcached>
                 <schedule>
-                    <cron_expr>*/5 * * * *</cron_expr>
+                    <cron_expr>0 23 * * *</cron_expr>
                 </schedule>
                 <run>
                     <model>cleaner/job::performMemcached</model>

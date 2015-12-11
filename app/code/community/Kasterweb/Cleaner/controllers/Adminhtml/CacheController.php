@@ -10,7 +10,7 @@ class Kasterweb_Cleaner_Adminhtml_CacheController extends Mage_Adminhtml_Control
 			->renderLayout();
 	}
 
-	public function mageTablesAction()
+	public function magentoTablesAction()
 	{
 		$database = Mage::getSingleton('cleaner/magentoDatabase');
 		$truncatedTables = $database->truncate();
@@ -20,7 +20,7 @@ class Kasterweb_Cleaner_Adminhtml_CacheController extends Mage_Adminhtml_Control
 		$this->_redirect('*/*');
 	}
 
-	public function mageDirAction()
+	public function magentoDirectoriesAction()
 	{
 		$directories = Mage::getModel('cleaner/magentoDirectories');
 		try {
