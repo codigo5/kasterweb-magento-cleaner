@@ -15,7 +15,7 @@ Lightweight module to provide some cleaner feature for caches and logs
 - [cURL]
 
 ## Installation
-- Download the lastest stable version [clicking here](https://github.com/kasterweb/kasterweb-magento-cleaner/archive/master.zip) and extract it
+- Download the lastest stable version [clicking here](https://github.com/kasterweb/kasterweb-magento-cleaner/releases) and extract it
 - In your admin area go to System > Magento Connect > Magento Connect Manager
 - Uninstall previous versions
 - In the section `Direct package file upload` choose the `Kasterweb_Cleaner-{$version}.tgz` file and then upload it
